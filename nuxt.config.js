@@ -1,6 +1,3 @@
-// import colors from 'vuetify/es5/util/colors'
-const webpack = require('webpack');
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -101,6 +98,13 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    workbox: {
+      // dev: process.env.NODE_ENV === 'development', // 開発環境でService Workerを有効にする
+      // importScripts: [
+      //   // 追加したいスクリプトファイルのパスを指定します
+      //   '/static/my-script.js',
+      // ],
+    },
     icon: {
       source:
         '/resized_image512_1.15_2023_0422_040529_-with-white-background.png',
@@ -118,7 +122,6 @@ export default {
       description: 'MobileShield',
       theme_color: '#fff3e0',
       background_color: '#fff3e0',
-
     },
   },
 
@@ -171,7 +174,7 @@ export default {
       const version = `1.0.${new Date()
         .toISOString()
         .replace(/[-T:.Z]/g, '')
-        .substring(2, 8)}.1` // 今日の日付を使用してバージョンを生成
+        .substring(2, 8)}.2` // 今日の日付を使用してバージョンを生成
       generator.options.env.buildVersion = version // ビルドバージョンを環境変数に設定
       console.log(
         `Generated with version: ${generator.options.env.buildVersion}`
