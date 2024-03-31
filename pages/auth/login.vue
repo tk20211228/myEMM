@@ -225,6 +225,8 @@ export default {
       },
       signInFlow: 'popup',
       signInSuccessUrl: '/information',
+      // signInSuccessUrl: 'https://myemm.work/information', // ここをカスタムドメインに変更
+
       signInOptions: [
         {
           provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
