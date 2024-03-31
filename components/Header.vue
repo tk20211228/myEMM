@@ -148,7 +148,7 @@ export default {
       // right: true,
       // rightDrawer: false,
       // title: 'Sample App',
-      title: 'Sample App',
+      title: 'MyEmm',
     }
   },
   computed: {

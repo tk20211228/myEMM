@@ -145,9 +145,10 @@ export default {
             },
           }
         )
-        // console.log(res)
-        if (res && res.url) {
-          window.location.href = res.url
+        // console.log(res.data.url)
+        // console.log(res.url)
+        if (res && res.data.url) {
+          window.location.href = res.data.url
         }
       } catch (error) {
         console.error('Error posting announcement:', error)
@@ -176,9 +177,9 @@ export default {
             },
           }
         )
-        if (res && res.name) {
-          this.enterpriseId = res.name
-          this.$store.dispatch('auth-firebase/postEnterpriseId', res)
+        if (res && res.data.name) {
+          this.enterpriseId = res.data.name
+          this.$store.dispatch('auth-firebase/postEnterpriseId', res.data)
           this.e6 = 3
         }
       } catch (error) {
