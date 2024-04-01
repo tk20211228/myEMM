@@ -31,47 +31,6 @@
                 </v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
-
-            <!-- カード -->
-
-            <v-row align="stretch" class="mb-12">
-              <!-- <v-col
-                v-for="(card, index) in cards"
-                :key="index"
-                cols="12"
-                sm="6"
-                md="4"
-                lg="4"
-                xl="4"
-                class="mb-3 d-flex"
-              > -->
-              <v-col
-                v-for="(card, index) in cards"
-                :key="index"
-                cols="12"
-                class="mb-3 d-flex"
-              >
-                <v-card class="d-flex flex-column" height="100%" width="100%">
-                  <!-- <v-card-title class="justify-center card-title">
-                    {{ card.title }}
-                  </v-card-title> -->
-                  <v-img
-                    class="card-image"
-                    :src="'/' + card.image"
-                    position="top"
-                    contain
-                  ></v-img>
-                  <!-- <v-card-text class="px-11 flex-grow-1">
-                    <p>{{ card.description }}</p>
-                  </v-card-text> -->
-                  <!-- <v-card-actions class="mb-4 justify-center">
-                    <v-btn :to="card.to" color="primary" outlined rounded>
-                      「 {{ card.title }} 」はこちら</v-btn
-                    >
-                  </v-card-actions> -->
-                </v-card>
-              </v-col>
-            </v-row>
           </v-row>
         </v-col>
       </v-row>
@@ -109,36 +68,6 @@ export default {
   },
 
   data: () => ({
-    cards: [
-      {
-        title: 'デバイス管理',
-        description:
-          'Android Management API を活用しています\n この API は、幅広いデバイス管理機能を提供しています。\n また、企業の情報漏えいリスクを低減できます。',
-        to: '/device',
-        image: 'resized_image512_1.3_2023_0422_032858.png',
-      },
-      // {
-      //   title: 'MDM 初期設定',
-      //   description:
-      //     'Android Management API を利用する前に、まずエンタープライス登録が必要です。\n この登録によって、企業や組織のアカウントが作成され、API の各種機能を使用できるようになります。',
-      //   to: 'setting/enterprise-create',
-      //   image: 'image_200_2023_0416_081024.png',
-      // },
-      // {
-      //   title: '読書ログ',
-      //   description:
-      //     'Google Books API を用いて、読書ログの管理が簡単にできます。\n この API を使えば、ユーザーは自分の読書履歴や現在読んでいる本、読みたい本のリストを作成・編集・保存できます。',
-      //   to: '/book',
-      //   image: 'image_200_2023_0416_081117.png',
-      // },
-      // {
-      //   title: 'Vuex',
-      //   description: 'Vuexを機能理解するために作成したTEST画面です。',
-      //   to: '/legacy/vuextest',
-      //   image: 'image_200_2023_0416_081117.png',
-      // },
-    ],
-    // uid: this.$store.state.auth.user.uid,
   }),
   computed: {
     iconColor() {
@@ -209,15 +138,5 @@ export default {
 <style scoped>
 p {
   white-space: pre-line;
-}
-
-.card-image {
-  width: 100%;
-  max-width: 250px; /* 画像の最大幅を設定 */
-  margin: 16px auto; /* 上下のマージンを16pxに設定し、左右のマージンを自動調整 */
-}
-
-.card-title {
-  font-size: 1.3em; /* タイトルのフォントサイズを1.5倍に設定 */
 }
 </style>
