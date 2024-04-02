@@ -133,3 +133,9 @@ $ firebase deploy
    - https://{project_id}.firebaseapp.com/\*
    - https://{project_id}.web.app/\*
    - https://example.co.jp/* 　※カスタムドメイン
+
+## 認識している問題
+
+- `sw.js`と`firebase.js`の統合されていない
+- PWA で端末にアプリをダウンロードする際、アプリ名が変更できない<br>
+  → 対応：dist フォルダを削除し、再ビルトすると、変更できる
