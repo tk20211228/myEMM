@@ -7,31 +7,32 @@
 
 ### デバイス管理
 
-- デバイスを 10 端末づつでリストで管理しています。
-- QR コードを生成してデバイス
+- QR コードを読み込むだけで Android 端末を管理することができます。
 
 ### FCM Push 機能
 
-- WEB アプリを PWA として端末にインストールすることで、管理者からのお知らせ機能を受信することができます。
+- 管理者からのお知らせを通知で受信することができます。
 
 ## 技術スタック
 
-このプロジェクトは、フロントエンドに Nuxt.js（2.17）と Vuetify を主に使用し、バックエンドには Firebase を活用して構築されています。<br>具体的には、以下の技術スタックを使用しています。
+- フロントエンドは Nuxt.js（2.17）と Vuetify を使用しています。
 
-- モバイルデバイス管理（MDM）は、Android Management API を使用して作成されています。
+- モバイルデバイス管理（MDM）は、Android Management API を使用しています。<br>
   https://developers.google.com/android/management?hl=ja
 
-- バックエンド ： Cloud Functions for Firebase (言語：JavaScript、Node.js、ワークフレーム：Express）
-- データベース ：NoSQL の Cloud Firestore
-- Web サーバー ：Firebase Hosting
-- 認証機能 ：Firebase Authentication
-- メッセージ配信 ：Firebase Cloud Messaging
+- バックエンドは 下記、Firebase を活用して構築されています。
+  - バックエンド ： Cloud Functions for Firebase (言語：JavaScript、Node.js、ワークフレーム：Express）
+  - データベース ： Cloud Firestore
+  - Web サーバー ：Firebase Hosting
+  - 認証機能 ：Firebase Authentication
+  - メッセージ配信 ：Firebase Cloud Messaging
 
 ## 使い方
 
-[事前準備]
-・任意に Google アカウント（xxxxx@gmail.com）を用意する。
-・Android10 以上の端末を初期化の状態で用意する。
+[事前準備]<br>
+
+- 任意に Google アカウント（xxxxx@gmail.com）を用意する。<br>
+- Android10 以上の端末を初期化の状態で用意する。
 
 [手順]
 
@@ -47,11 +48,11 @@
 9. 初期化された端末の画面を連続で６回以上っタップすると、QR コードリーダーが起動します。
 10. QR コードを読み込み、設定を続け、ホーム画面が表示されれば、キッティングが完了します。
 
-※位置情報が、強制有効状態でキッティングされます。
-※元に戻すには、端末を初期化してください。
+※位置情報が、強制有効状態でキッティングされます。<br>
+※元に戻すには、端末を初期化してください。<br>
 ※EnterpriseID 破棄するには、メニュー＞歯車アイコン＞[WORK を確認する]を押下し、「組織の情報」＞メニュー＞「組織を削除」を押下してください。
 
-## Build Setup
+## Build Setup ※以降は実施にローカル環境で動作を確認したい方向けの説明です。
 
 #### `default.env` を `.env` にリネームし、環境変数を設定する。
 
